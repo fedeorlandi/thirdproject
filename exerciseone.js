@@ -75,7 +75,6 @@ spaceblank = capitalcity.indexOf(" ");
 console.log(spaceblank);
 
 //numbersix 
-//
 var mycarrer, firstword, secondword, positionblank, result;
 mycarrer = 'ingenieria mecanica';
 positionblank = mycarrer.indexOf(" ");
@@ -86,6 +85,85 @@ console.log(firstword);
 console.log(secondword);
 console.log(result);
 
+/*
+Exercise 3:
+Arrays
+    1) Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)
+    2) Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+    3) Agregar un elemento al principio y al final del array (utilizar unshift y push).
+    4) Quitar un elemento del principio y del final del array (utilizar shift y pop).
+    5) Invertir el orden del array (utilizar reverse)
+    6) Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
+    7) Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+*/
 
+//numberone
+var myArray, myOrderArray, myReverseArray, myJoinArray, myfirstarray, copyArray;
+myArray = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+console.log(myArray[4], myArray[10]);
+myfirstarray = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
+//numbertwo
+myOrderArray = myArray.sort();
+console.log(myOrderArray);
+
+//numberthree
+myArray.push('Ultimo Mes');
+myArray.unshift('Primer Mes');
+console.log(myArray);
+
+//numberfour
+myArray.pop();
+myArray.shift();
+console.log(myArray);
+
+//numberfive
+myReverseArray = myArray.reverse();
+myJoinArray = myArray.join("-");
+console.log(myJoinArray);
+
+//numbersix
+copyArray = myfirstarray.slice(4,11);
+console.log(copyArray);
+
+/*
+If Else
+    Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”
+    Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
+        “Bebe” si la edad es menor a 2 años
+        “Nino” si la edad es entre 2 y 12 años
+        “Adolecente” si la edad es entre 13 y 19 años
+        “Joven” si la edad está entre 20 y 30 años
+        “Adulto” entre 31 y 60 años
+        “Adulto mayor” entre 61 y 75 años
+        “Anciano” si es mayor a 75 años
+*/
+
+//number one
+
+if (Math.random() >= 0.5){
+    alert('Greater than 0,5');
+} else{
+    alert('Lower than 0,5');
+}
+
+//number two
+var Age;
+Age = 61;
+
+if (Age < 2){
+    alert('Bebe');
+} else if (Age >= 2 && Age <= 12){
+    alert('Niño');
+} else if (Age >= 13 && Age <= 19){
+    alert('Adolescente');
+} else if (Age >= 20 && Age <= 30){
+    alert('Joven');
+} else if (Age >= 31 && Age <=60){
+    alert('Adulto');
+} else if (Age >= 61 && Age <= 75){
+    alert('Adulto Mayor'); 
+} else {
+    alert('Anciano');
+}
 
