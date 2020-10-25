@@ -206,3 +206,75 @@ Funciones
     A la función suma del ejercicio 6b) agregarle una llamada que valide que los números sean enteros. En caso que haya decimales mostrar un alerta con el error y retorna el número convertido a entero (redondeado).
     Convertir la validación del ejercicio 6b) en una función separada y llamarla dentro de la función suma probando que todo siga funcionando igual.
 */
+
+//number one
+var numberone, numbertwo, sum;
+function suma(numberone, numbertwo){
+    return numberone + numbertwo;
+}
+sum = suma(4,10);
+console.log(sum);
+
+//number two
+var numberone, numbertwo, sum;
+function suma(numberone, numbertwo){
+    if(typeof(numberone) !== 'number' || typeof(numbertwo) !== 'number'){
+        return NaN;
+        alert('One or two parameters are not a number');
+    } else {
+        return numberone + numbertwo;
+    }
+}
+sum = suma('Federico',10);
+console.log(sum);
+
+//number three
+var somenumber;
+function validateinteger(somenumber){
+    if (Number.isInteger(somenumber) === true){
+        return 'This is an integer number';
+    } else {
+        return 'Tis is not an integer number';
+    } 
+}
+
+//number four
+var numberone, numbertwo, sum;
+function suma(numberone, numbertwo){
+    if(typeof(numberone) !== 'number' || typeof(numbertwo) !== 'number'){
+        return NaN;
+        alert('One or two parameters are not a number');
+    } else if (Number.isInteger(numberone) === false || Number.isInteger(numbertwo) === false) {
+        alert('Error');
+        numberone = Math.round(numberone);
+        numbertwo = Math.round(numbertwo);
+        return numberone + numbertwo;
+    } 
+}
+sum = suma(3.7,10);
+console.log(sum);
+
+//number five
+var numberone, numbertwo, firstnumber, secondnumber, sum, out, output;
+function mistake (firstnumber, secondnumber){
+    if(typeof(firstnumber) !== 'number' || typeof(secondnumber) !== 'number'){
+        return 'You can not do it';
+    } else {
+        return 'All of the parameters are numbers';
+    }
+}
+function add (numberone, numbertwo){
+    firstnumber = numberone;
+    secondnumber = numbertwo;
+    out = mistake(firstnumber, secondnumber);
+    if(out !== 'All of the parameters are numbers'){
+        return NaN;
+        alert('One or two parameters are not a number');
+    } else {
+        return numberone + numbertwo;
+    }
+}
+
+output = add (2, 4);
+console.log (output);
+
