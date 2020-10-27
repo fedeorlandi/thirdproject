@@ -177,17 +177,17 @@ For
 //number one
 var i, mySecondArray;
 mySecondArray = ['chorizo', 'morcilla', 'vacio', 'matambre', 'costilla'];
-for (var i=0; i <=4; i++){
+for (var i=0; i < mySecondArray.length; i++){
     alert(mySecondArray[i]);
 }
 //number two
-for (var i=0; i <=4; i++){
+for (var i=0; i < mySecondArray.length; i++){
     alert(mySecondArray[i].substring(0,1).toUpperCase() + mySecondArray[i].substring(1).toLowerCase());
 }
 //number three
 var sentence;
 sentence = " ";
-for (var i=0; i <=4; i++){
+for (var i=0; i < mySecondArray.length; i++){
     sentence += mySecondArray[i] + " ";
 }
 alert(sentence);
@@ -219,8 +219,8 @@ console.log(sum);
 var numberone, numbertwo, sum;
 function suma(numberone, numbertwo){
     if(typeof(numberone) !== 'number' || typeof(numbertwo) !== 'number'){
-        return NaN;
         alert('One or two parameters are not a number');
+        return NaN;
     } else {
         return numberone + numbertwo;
     }
@@ -242,8 +242,8 @@ function validateinteger(somenumber){
 var numberone, numbertwo, sum;
 function suma(numberone, numbertwo){
     if(typeof(numberone) !== 'number' || typeof(numbertwo) !== 'number'){
-        return NaN;
         alert('One or two parameters are not a number');
+        return NaN;
     } else if (Number.isInteger(numberone) === false || Number.isInteger(numbertwo) === false) {
         alert('Error');
         numberone = Math.round(numberone);
@@ -268,8 +268,8 @@ function add (numberone, numbertwo){
     secondnumber = numbertwo;
     out = mistake(firstnumber, secondnumber);
     if(out !== 'All of the parameters are numbers'){
-        return NaN;
         alert('One or two parameters are not a number');
+        return NaN;
     } else {
         return numberone + numbertwo;
     }
